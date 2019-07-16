@@ -2,7 +2,7 @@
 
 @{
     var consentFeature = Context.Features.Get<ITrackingConsentFeature>();
-    var showBanner = consentFeature?.CanTrack ?? false;
+    var showBanner = !consentFeature?.CanTrack ?? false;
     var cookieString = consentFeature?.CreateConsentCookie();
 }
 
@@ -21,11 +21,13 @@
             </div>
             <div class="collapse navbar-collapse">
                 <p class="navbar-text">
-                    Use this space to summarize your privacy and cookie use policy.
+                    Wij maken op deze website gebruik van cookies. 
+                    Een cookie is een eenvoudig klein bestandje dat met pagina’s van deze website
+                    wordt meegestuurd en door uw browser op uw harde schrijf van uw computer wordt opgeslagen.
                 </p>
                 <div class="navbar-right">
-                    <a asp-page="/Privacy" class="btn btn-info navbar-btn">Learn More</a>
-                    <button type="button" class="btn btn-default navbar-btn" data-cookie-string="@cookieString">Accept</button>
+                    <a asp-page="/Privacy" class="btn btn-info navbar-btn">Meer informatie</a>
+                    <button type="button" class="btn btn-default navbar-btn" data-cookie-string="@cookieString">Accepteren</button>
                 </div>
             </div>
         </div>

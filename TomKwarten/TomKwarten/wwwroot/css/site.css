@@ -1,25 +1,11 @@
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification 
 for details on configuring this project to bundle and minify static web assets. */
-body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
 
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
-}
-
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"] {
+    padding: 0;
+    margin: 0;
     width: 100%;
 }
 
@@ -34,4 +20,49 @@ body {
     .carousel-caption {
         display: none;
     }
+}
+
+/* Jumbotron styling */
+.jumbotron {
+    background-image: url('../images/parallaxbg.gif');
+    height: 700px;
+    position: relative;
+    padding: 0;
+    background-size: cover;
+}
+
+    .jumbotron .container {
+        z-index: 2;
+        position: relative;
+        text-align: center;
+        padding-top: 200px;
+        max-width: 35%;
+    }
+
+        .jumbotron .container h1 {
+            color: white;
+            border-bottom: solid;     
+            border-width: medium;
+        }
+
+        .jumbotron .container p {
+            color: white;
+            font-size: x-large;
+        }
+
+    .jumbotron .overlay {
+        background-color: #781a80;
+        opacity: 0.4;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+/*  Profile styling */
+#profile {
+    height: 700px;
+    background-color: darksalmon;
 }
